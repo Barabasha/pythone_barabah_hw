@@ -19,10 +19,13 @@ print()
 print_task(12)
 
 def num2sum (number):
-    sum = int(number[0]) + int(number[1]) + int(number[2])
+    num1 = int (number / 100) #find the first digits
+    num2 = int ((number - num1*100)/10) #find the second digits
+    num3 = number - num1*100 - num2*10
+    sum = num1 + num2 + num3
     return sum
 
-number = input('Input number: ')
+number = int(input('Input number: '))
 print("Sum of digits of number", number, "=", num2sum (number))
 print()
 
