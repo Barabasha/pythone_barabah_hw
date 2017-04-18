@@ -6,6 +6,8 @@ def print_task(n) :
 def is_even (number):
     if number % 2 == 0:
         return True
+    else :
+        return False
 
 print_task(14)
 number = int (input ("Input number: "))
