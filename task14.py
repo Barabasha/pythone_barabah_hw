@@ -3,12 +3,13 @@ def print_task(n) :
     return
 
 #===========================task14===========================
-def even (number):
-    return number % 2
+def is_even (number):
+    if number % 2 == 0:
+        return True
 
 print_task(14)
 number = int (input ("Input number: "))
-if even(number) == False :
+if is_even(number) == True :
     print ("Number is even")
 else:
     print ("Number is not even")
