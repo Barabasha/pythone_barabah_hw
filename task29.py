@@ -20,14 +20,13 @@ def frequency(lst):
         else:
             count2 += 1
 
-    while count0 != count1 and count0 != count2 and count1 != count2:
+    if count0 != count1 and count0 != count2 and count1 != count2:
         if count0 > max(count1, count2):
-            print("Число '0' встречается чаще всего:", count0, "раз")
+            print("Число '0' встречаbется чаще всего:", count0, "раз")
         elif count1 > max(count0, count2):
             print("Число '1' встречается чаще всего:", count1, "раз")
         elif count2 > max(count0, count1):
             print("Число '-1' встречается чаще всего:", count2, "раз")
-        break
     return
 
 lst = create_list(11,-1,1)
