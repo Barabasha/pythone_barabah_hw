@@ -5,24 +5,13 @@ n=10
 lower_limit = 0
 upper_limit = 100
 
-for i in range(n):
-    lst.append(random.randint(lower_limit,upper_limit))
+lst = [random.randint(lower_limit, upper_limit) for x in range(n)]
 print (lst)
 
-min_idx=0
-max_idx=0
-if max(lst)!= min(lst):
-    for i in range(len(lst)):
-        if lst[i] == max(lst):
-            max_idx = i
-        elif lst[i] == min(lst):
-            min_idx =  i
-else:
-    print (lst)
+max_idx = lst.index(max(lst))
+min_idx = lst.index(min(lst))
 
-elem = lst[max_idx]
-lst[max_idx] = lst[min_idx]
-lst[min_idx] = elem
+lst[max_idx], lst[min_idx] = lst[min_idx], lst[max_idx]
 print(lst)
 
 
