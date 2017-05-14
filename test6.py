@@ -23,8 +23,8 @@ def prime (lst):
 
 lst = []
 prime_number = []
+prime_number=my_shuffle(prime(lst))
 for i in range(0,10):
-    prime_number.append(my_shuffle(prime(lst))[i])
-print(prime_number)
+    print(prime_number[i],end = "\t")
 
 
