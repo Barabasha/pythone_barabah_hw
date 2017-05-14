@@ -11,14 +11,14 @@ def my_shuffle (lst):
 def prime (lst):
     import math
     lst.append(2)
-    for prime_found in range (3,100):
-        count = True
-        for y in range (2,int(math.sqrt(prime_found)+1)):
-            if prime_found%y == 0 :
-                count = False
+    for x in range (3,100):
+        prime_found = True
+        for y in range (2,int(math.sqrt(x)+1)):
+            if x%y == 0 :
+                prime_found = False
                 break
-        if count == True:
-            lst.append(prime_found)
+        if prime_found == True:
+            lst.append(x)
     return lst
 
 lst = []
