@@ -3,26 +3,31 @@ class Godzila:
     amount_eaten = 0
     limit = None
 
-    def eating_people(self,food):
+    def is_hungry(self, food):
         full = 100
-        if self.amount_eaten*full/self.stomach <= self.limit:
+        fullness = (self.amount_eaten + food) * full / self.stomach
+        if fullness < self.limit:
             self.amount_eaten += food
-        if self.amount_eaten*full/self.stomach >= self.limit:
-            print("That's enough. I'm full")
-            self.amount_eaten = self.limit*self.stomach/full
-        print("I ate" ,self.amount_eaten)
+            print("I ate :", food, "The stomach is full on :", fullness, "%" )
+            return False
+        else:
+            print("I ate : %.2f That's enough. The stomach is full on : %.2f " %(fullness - self.limit, self.limit))
+            return True
 
     def __init__(self,stomach,amount_eaten,limit):
         self.stomach = stomach
         self.amount_eaten = amount_eaten
         self.limit = limit
 
+import random
 our_godz = Godzila(1000,0,90)
 food = 0
-while food != 'q' :
-    food = input("Enter amount eat or 'q' for exit")
-    if food != 'q':
-        our_godz.eating_people(int(food))
+while our_godz.is_hungry(food) == False:
+    food = random.randint (20,150)
+
+
+
+
 
 
 
