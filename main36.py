@@ -15,3 +15,6 @@ if __name__ == "__main__":
     train.Train.print_info(t2)
     plane.Plane.print_info (p1)
     plane.Plane.print_info (p2)
+    plane.Plane.speed_comparison(p1, p2)
+    train.Train.is_type_cargo_passenger(t1)
+    train.Train.is_type_cargo_passenger(t2)
